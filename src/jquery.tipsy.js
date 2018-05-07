@@ -150,8 +150,6 @@
                 id = maybeCall(this.options.id, this.$element[0]);
             if ($e.prop('title') || typeof($e.prop('original-title')) != 'string') {
                 $e.prop('original-title', $e.prop('title') || '').removeAttr('title');
-                // add aria-describedby pointing to the tooltip's id
-                $e.attr('aria-describedby', id);
                 // if it doesn't already have a tabindex, force the trigger element into the tab cycle
                 // to make it keyboard accessible with tabindex=0. this automatically makes elements
                 // that are not normally keyboard accessible (div or span) that have been tipsy-fied
